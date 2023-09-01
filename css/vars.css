@@ -1,0 +1,64 @@
+/* custom properties */
+
+:root {
+ /* Fuentes 
+ff: font family
+fs: font size
+fw: font weight
+xl: extra large
+lg: large
+md: medium
+nm: normal
+sm: small
+bk: black
+medium: medium
+rg: regular
+clr: colores
+bg: background
+*/
+
+    --ff-main: 'Archivo', sans-serif;
+    --ff-secondary: 'Roboto', sans-serif;
+    --fs-xl: 5rem; /*80px*/
+    --fs-lg: 2.5rem; /*40px*/
+    --fs-md: 1.125rem; /*18px*/
+    --fs-nm: 1rem; /*16px*/
+    --fs-sm: 0.875rem; /*14px*/ 
+    --fw-bk: 900; 
+    --fw-md: 500; 
+    --fw-rg: 400; 
+    /* colores */
+    --clr-principal:hsla(12, 76%, 61%, 1);
+    --clr-main-bg: hsla(15, 44%, 96%, 1);
+    --clr-inner-bg: hsla(12, 67%, 92%, 1);
+    --clr-white: hsla(0, 0%, 100%, 1);
+    --clr-gray: hsla(0, 0%, 55%, .1);
+    --clr-gray-text: hsla(0, 0%, 55%, 1);
+    --clr-black: hsla(0, 0%, 0%, 1)
+
+}
+
+
+/* // roboto regular 18 (Iconos de navegacion)
+// archivo black 80 (Titulo de la pagina)
+// roboto regular 18 (Pequeña descripcion de la pagina)
+// robot medium 18 (Boton)
+
+// archivo black 18 (debajo de los iconos)
+// roboto regular 16 (iconos)
+
+// archivo black 40 (subtitulo)
+
+// roboto medium 16 (precio por noche, color naranja) 
+// archivo black 18 (nombre del destino)
+// roboto regular 16 (descripcion del destino)
+// robot medium 18 (Boton de mas informacion del destino)
+
+// robot medium 18 (Boton de ¨View all¨)
+
+// archivo black 40 (titulo para ingresar correo)
+// robot medium 16 (parrafo correo)
+// roboto regular 14 (Correo electronico)
+
+// archivo black 18 (Titulo informacion)
+// roboto regular 16 (Parrafo informacion) */

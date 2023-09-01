@@ -1,0 +1,329 @@
+@import url(./vars.css);
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background: var(--clr-main-bg);
+  /*El flex sirve para acomodar los elementos necesarios swegun las cardinalidades*/
+  display: grid;
+  font-family: var(--ff-secondary);
+  /*El margin y el padding es para rellenar el margen que el navegador coloca por prederteminada*/
+  margin: 0;
+  padding: 0;
+}
+
+.hero-container {
+  background: url(../imgs/header-camping.jpg);
+  background-position: center;
+  /*El cover hace que la imagen rellene toda la pantalla*/
+  background-size: cover;
+  /*El border-bottom-left-radius y el border-bottom-right-radius se usa parar redondear las esquinas de una imagen */
+  border-bottom-left-radius: 6rem;
+  border-bottom-right-radius: 6rem;
+  color: var(--clr-white);
+  /*El min elige entre las diferentes resoluciones para adpatar mejor segun la pantalla que tengas*/
+  height: min(55rem, 60rem, 65rem);
+  /*El text-align es para centrar o acomodar el texto*/
+  text-align: center;
+  width: 100%;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+  margin-left: 10rem;
+  margin-bottom: 8rem;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  /*Para separar elementos de una lista */
+  gap: 1rem;
+  list-style-type: none;
+  margin-left: 2rem;
+}
+
+.nav-list-link {
+  text-decoration: none;
+  color: var(--clr-white);
+  font-size: var(--fs-md);
+}
+
+.hero-title {
+  font-family: var(--ff-main);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bk);
+  /*unidad ch es cantidad de caracteres*/
+  /*width: 15ch;
+    margin: auto;*/
+
+  /*segun el tamaño de la pantalla va a elegir la fuente que mejor se va adapatar a la pantalla*/
+  font-size: clamp(var(--fs-lg), 4rem, var(--fs-xl));
+}
+
+.hero-text {
+  font-size: var(--fs-md);
+  width: clamp(30ch, 50%, 55ch);
+  margin: 0 auto 2rem;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.btn {
+  /*Propiedades de la letra*/
+  color: var(--clr-white);
+  display: flex;
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-md);
+  text-decoration: none;
+  /*Propiedades del boton*/
+  align-items: center;
+  background: var(--clr-principal);
+  border-radius: 1.5rem;
+  padding: 0.7rem 3.5rem;
+}
+
+.activities-container {
+  display: grid;
+  /*El ancho de la pantalla es previsto por el vw*/
+  width: 70vw;
+  margin: 6.7rem auto;
+  /* el auto-fit lo ordenada automaticamente a su vez simetricamente y minmax considera el minimo y el maximo que podria llegar a ocupar*/
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.activity {
+  display: grid;
+  background: var(--clr-white);
+  border-radius: 2rem;
+  text-align: center;
+  padding: 3rem 1rem 3.5rem 1rem;
+}
+
+.activity-icon {
+  margin: auto;
+}
+
+.activities-title {
+  margin: 1rem 0 auto;
+  font-size: var(--fs-md);
+  font-family: var(--ff-main);
+}
+
+.activities-text {
+  font-size: var(--fs-sm);
+  font-family: var(--ff-secondary);
+  margin: 1rem 1rem 1rem;
+}
+
+.destination-container {
+  text-align: center;
+}
+
+.destination-title {
+  font-family: var(--ff-main);
+  font-size: clamp(var(--fs-md), 1.875rem, var(--fs-lg));
+  margin: 1rem auto;
+  width: 17ch;
+}
+
+.activity-thumb {
+  display: flex;
+  /**/
+  position: relative;
+  padding: 0 1rem;
+}
+
+.activity-image {
+  display: block;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.like-btn {
+  position: absolute;
+  background: var(--clr-white);
+  border-radius: 0.5rem;
+  border: none;
+  top: 1rem;
+  right: 2rem;
+}
+.view-all-btn {
+  background-color: var(--clr-main-bg);
+  color: var(--clr-principal);
+  margin-top: 1rem;
+  border: 0.1rem solid var(--clr-principal);
+}
+
+.activity-price {
+  display: block;
+  position: absolute;
+  background: var(--clr-white);
+  color: var(--clr-principal);
+  text-align: center;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding: 1rem 2rem;
+  bottom: -1rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.read-btn {
+  display: block;
+  width: 50%;
+  margin: auto;
+  background: var(--clr-gray);
+  color: var(--clr-gray-text);
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+}
+
+.margin-none {
+  margin: 0;
+}
+
+.suscribe {
+  border-radius: 2rem;
+  background: var(--clr-inner-bg);
+}
+
+.in-touch {
+  display: grid;
+  align-items: center;
+  align-content: center;
+  margin-left: 3rem;
+}
+
+.subscribe-title {
+  font-size: clamp(2rem, 2.25rem, var(--fs-lg));
+  width: min(80%, 90%, 100%);
+}
+
+.cabin {
+  display: block;
+  margin: auto;
+  width: 75%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.subscribe-form {
+  background: var(--clr-white);
+  display: flex;
+  border-radius: 1rem;
+  padding: 1rem;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.email {
+  border: none;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.email:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.1rem var(--clr-principal);
+  transition: box-shadow 0.3s;
+}
+
+.submit-png {
+  background: url(../imgs/icons/send.svg) var(--clr-principal);
+  border: none;
+  background-repeat: no-repeat;
+  border-radius: 0.75rem;
+  background-position: center;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+}
+
+.footer-container {
+  border-top-left-radius: 6rem;
+  border-top-right-radius: 6rem;
+  background: var(--clr-inner-bg);
+  width: 100%;
+  display: grid;
+  margin: 2rem 0 0;
+}
+
+.footer-content {
+  display: grid;
+  width: 70vw;
+  margin: 6.7rem auto;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.nav-bottom-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav-bottom-link {
+  color: var(--clr-);
+  text-decoration: none;
+  font-size: var(--fs-md);
+}
+
+.footer-legal {
+  text-align: center;
+  font-size: var(--fs-md);
+}
+
+.footer-downloads {
+  display: grid;
+  width: 70vw;
+  margin: auto;
+}
+
+.cta-app-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/*Media queries*/
+/*tamaño maxima de pantalla 768px*/
+@media (max-width: 767.98px) {
+  .top-nav {
+    margin-top: 2rem;
+    margin-left: 2rem;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .in-touch {
+    margin: 0 1rem 2rem;
+    text-align: center;
+    order: 2;
+  }
+
+  .cabin {
+    margin-bottom: 0;
+  }
+
+  .subscribe-title{
+    margin: auto;
+  }
+}
